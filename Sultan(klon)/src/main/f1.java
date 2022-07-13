@@ -36,7 +36,6 @@ class Sultan {
         harmfulness[0] = 0.2f;
         harmfulness[1] = 0.3f;
         harmfulness[2] = 0.1f;
-        SultAmout+=1;
     }
     Sultan(String name, byte vozrast) {
         this.name = name;
@@ -59,7 +58,6 @@ class Sultan {
         harmfulness[0] = 0.2f;
         harmfulness[1] = 0.3f;
         harmfulness[2] = 0.1f;
-        SultAmout+=1;
     }
 
     Sultan(float wealth) {
@@ -83,7 +81,6 @@ class Sultan {
         harmfulness[0] = 0.2f;
         harmfulness[1] = 0.3f;
         harmfulness[2] = 0.1f;
-        SultAmout+=1;
     }
     Sultan(Sultan KtoTo) {
         this.name = KtoTo.name;
@@ -102,7 +99,6 @@ class Sultan {
         harmfulness = new float[KtoTo.wives];
         for (int i = 0; i < KtoTo.wives; i++)
             harmfulness[i] = KtoTo.harmfulness[i];
-        SultAmout+=1;
     }
     void printSultan() {
         System.out.println("Имя султана: " + this.name);
@@ -137,6 +133,7 @@ class Sultan {
             if (this.beauty[i] == this.MaxBeauty()) System.out.println("Самая красивая жена - " + this.names[i]);
         }
         System.out.println("");
+        SultAmout+=1;
     }
     void randomizer() {
         String imena[] = {
@@ -154,7 +151,7 @@ class Sultan {
         name = imena[(new Random()).nextInt(imena.length)];
         age = (byte)((new Random()).nextInt(20) + 20);
         wealth = ((new Random()).nextFloat() * 100 + 100);
-        wives = ((new Random()).nextInt(2) + 1);
+        wives = ((new Random()).nextInt(3) + 1);
         String sheni[] = {
                 "Aila",
                 "Aisha",
@@ -214,7 +211,7 @@ class Sultan {
     }
 
     public String getName() {
-        return name;
+            return name;
     }
 
     public void setName(String NewName) {
