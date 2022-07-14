@@ -10,7 +10,7 @@ public class Main {
 
         Sultan st2 = new Sultan(st1);
 
-        Sultan Halifat[] = new Sultan[10];
+        Sultan[] Halifat = new Sultan[10];
         for (int i = 0; i < Halifat.length; i++) {
             st2.randomizer();
             Halifat[i] = new Sultan(st2);
@@ -43,8 +43,6 @@ public class Main {
 
         System.out.println("");
 
-
-
         for (int i = 0; i < Halifat.length; i++) {
             st2.randomizer();
             Halifat[i].printSultan();
@@ -56,7 +54,7 @@ public class Main {
             if (Halifat[i].SultanHappiness() > MH.SultanHappiness())
                 MH = Halifat[i];
 
-                System.out.println("Самый счастливый султан из Халифата - " + MH.name);
+        System.out.println("Самый счастливый султан из Халифата - " + MH.name);
 
         Sultan MW = Halifat[0];
         for (int i = 1; i < Halifat.length; i++)
@@ -67,8 +65,6 @@ public class Main {
 
         System.out.printf("Самый богатый султан в Халифате - %s. Его состояние : %.2f миллионов золота", MW.name, MW.wealth);
         System.out.println("");
-
-        String shena;
 
         double MBW = Halifat[0].MaxBeauty();
         for (int i = 1; i < Halifat.length; i++)
