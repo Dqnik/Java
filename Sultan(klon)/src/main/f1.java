@@ -1,18 +1,15 @@
 package main;
 
 import java.util.Random;
-
-public class f1 {}
-
 class Sultan {
     String name;
     byte age;
     float wealth;
     int wives;
-    String names[];
-    int ages[];
+    String[] names;
+    int[] ages;
     float[] beauty;
-    float harmfulness[];
+    float[] harmfulness;
     static int SultAmout;
 
     Sultan() {
@@ -61,9 +58,9 @@ class Sultan {
     }
 
     Sultan(float wealth) {
-        this.name = name;
-        age = age;
-        wealth = 100f;
+        name = "";
+        age = 20;
+        this.wealth = wealth;
         wives = 3;
         names = new String[3];
         names[0] = "Haima";
@@ -83,22 +80,20 @@ class Sultan {
         harmfulness[2] = 0.1f;
     }
     Sultan(Sultan KtoTo) {
-        this.name = KtoTo.name;
+        name = KtoTo.name;
         age = KtoTo.age;
         wealth = KtoTo.wealth;
         wives = KtoTo.wives;
         names = new String[KtoTo.wives];
-        for (int i = 0; i < KtoTo.wives; i++)
-            names[i] = KtoTo.names[i];
         ages = new int[KtoTo.wives];
-        for (int i = 0; i < KtoTo.wives; i++)
-            ages[i] = KtoTo.ages[i];
         beauty = new float[KtoTo.wives];
-        for (int i = 0; i < KtoTo.wives; i++)
-            beauty[i] = KtoTo.beauty[i];
         harmfulness = new float[KtoTo.wives];
-        for (int i = 0; i < KtoTo.wives; i++)
+        for (int i = 0; i < KtoTo.wives; i++) {
+            names[i] = KtoTo.names[i];
+            ages[i] = KtoTo.ages[i];
+            beauty[i] = KtoTo.beauty[i];
             harmfulness[i] = KtoTo.harmfulness[i];
+        }
     }
     void printSultan() {
         System.out.println("Имя султана: " + this.name);

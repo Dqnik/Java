@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
@@ -12,16 +13,16 @@ public class Main {
 
         Sultan st2 = new Sultan(st1);
 
-        Sultan Halifat[] = new Sultan[10];
+        Sultan[] Halifat = new Sultan[10];
         for (int i = 0; i < Halifat.length; i++) {
             st2.randomizer();
             Halifat[i] = new Sultan(st2);
         }
 
         Sultan st3 = new Sultan(12f);
-        for (int i = 0; i < Halifat.length; i++) {
-            if (st3.MaxBeauty() < Halifat[i].MaxBeauty()) {
-                st3 = Halifat[i];
+        for (Sultan sultan : Halifat) {
+            if (st3.MaxBeauty() < sultan.MaxBeauty()) {
+                st3 = sultan;
             }
         }
 
@@ -33,7 +34,7 @@ public class Main {
 
         st2.randomizer();
 
-        ArrayList<Sultan> VNH = new ArrayList<Sultan>();
+        ArrayList<Sultan> VNH = new ArrayList<>();
 
         VNH.add(st);
 
@@ -50,10 +51,7 @@ public class Main {
 
         System.out.println("");
 
-        ArrayList<Sultan> Hal = new ArrayList<Sultan>();
-
-        for (int i = 0; i < Halifat.length; i++)
-            Hal.add(Halifat[i]);
+        ArrayList<Sultan> Hal = new ArrayList<>(Arrays.asList(Halifat));
 
         for (Sultan h : Hal)
             h.printSultan();
@@ -65,7 +63,7 @@ public class Main {
             if (Halifat[i].SultanHappiness() > MH.SultanHappiness())
                 MH = Halifat[i];
 
-                System.out.println("Самый счастливый султан из Халифата - " + MH.name);
+        System.out.println("Самый счастливый султан из Халифата - " + MH.name);
 
         Sultan MW = Halifat[0];
         for (int i = 1; i < Halifat.length; i++)
@@ -77,8 +75,6 @@ public class Main {
         System.out.printf("Самый богатый султан в Халифате - %s. Его состояние : %.2f миллионов золота", MW.name, MW.wealth);
         System.out.println("");
 
-        String shena;
-
         double MBW = Halifat[0].MaxBeauty();
         for (int i = 1; i < Halifat.length; i++)
             if (Halifat[i].MaxBeauty() > MBW)
@@ -86,7 +82,7 @@ public class Main {
 
         System.out.println("");
 
-        System.out.printf("Султан с самой красивой женой в Халифате - %s. Его самая красивая жена: %s, ее коэфицент красоты: %.3f",st3.name,st3.MBWN,st3.MaxBeauty());
+        System.out.printf("Султан с самой красивой женой в Халифате - %s. Его самая красивая жена: %s, ее коэфицент красоты: %.2f",st3.name,st3.MBWN,st3.MaxBeauty());
         System.out.println("");
 
         System.out.println("");
