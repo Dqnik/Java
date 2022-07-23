@@ -88,6 +88,7 @@ class Sultan {
         ages = new int[KtoTo.wives];
         beauty = new float[KtoTo.wives];
         harmfulness = new float[KtoTo.wives];
+        MBWN = KtoTo.MBWN;
         for (int i = 0; i < KtoTo.wives; i++) {
             names[i] = KtoTo.names[i];
             ages[i] = KtoTo.ages[i];
@@ -131,7 +132,7 @@ class Sultan {
         SultAmout+=1;
     }
     void randomizer() {
-        String imena[] = {
+        String[] imena = {
                 "Ahmed",
                 "Humam",
                 "Hussein",
@@ -147,7 +148,7 @@ class Sultan {
         age = (byte)((new Random()).nextInt(20) + 20);
         wealth = ((new Random()).nextFloat() * 100 + 100);
         wives = ((new Random()).nextInt(3) + 1);
-        String sheni[] = {
+        String[] sheni = {
                 "Aila",
                 "Aisha",
                 "Alia",
@@ -282,13 +283,28 @@ class Sultan {
 
     public void setWives(int NewWives) {
         if (NewWives >= 0 && NewWives < 4 && wives != NewWives) {
-            String save[] = new String[wives];
-            for (int i = 0; i < wives; i++)
+            String[] save = new String[wives];
+            int[] save1 = new int[wives];
+            float[] save2 = new float[wives];
+            float[] save3 = new float[wives];
+            for (int i = 0; i < wives; i++){
                 save[i] = names[i];
+                save1[i] = ages[i];
+                save2[i] = beauty[i];
+                save3[i] = harmfulness[i];
+            }
             names = new String[NewWives];
-            int min = (wives < NewWives) ? (wives) : (NewWives);
-            for (int i = 0; i < min; i++)
+            ages = new int[NewWives];
+            beauty = new float[NewWives];
+            harmfulness = new float[NewWives];
+            int min = Math.min(wives, NewWives);
+            for (int i = 0; i < min; i++){
                 names[i] = save[i];
+                ages[i] = save1[i];
+                beauty[i] = save2[i];
+                harmfulness[i] = save3[i];
+
+            }
             wives = NewWives;
         }
     }
