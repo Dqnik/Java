@@ -80,7 +80,6 @@ public class Main {
                 MBW = Halifat[i].MaxBeauty();
 
         System.out.println();
-
         System.out.printf("Султан с самой красивой женой в Халифате - %s. Его самая красивая жена: %s, ее коэфицент красоты: %.2f",st3.name,st3.MBWN,st3.MaxBeauty());
         System.out.println();
 

@@ -2,7 +2,7 @@ package main;
 
 import java.util.Random;
 
-public class Wife {
+class Wife {
     String name;
     int age;
     float beauty;
@@ -10,17 +10,10 @@ public class Wife {
 
     Wife() {
         name = "";
-        age = 0;
-        beauty = 0;
-        harmfulness = 0;
+        age = 1;
+        beauty = 1;
+        harmfulness = 1;
         randomizer();
-    }
-
-    Wife(Wife Klon){
-        name = Klon.name;
-        age = Klon.age;
-        beauty = Klon.beauty;
-        harmfulness = Klon.harmfulness;
     }
 
      void randomizer() {
@@ -35,5 +28,50 @@ public class Wife {
         age = (new Random().nextInt(10) + 20);
         beauty = (new Random().nextFloat());
         harmfulness = (new Random().nextFloat());
+    }
+
+    void printWife(){
+        System.out.println("name: " + this.name);
+        System.out.println("age: " + this.age);
+        System.out.printf("красота: %.2f",this.beauty);
+        System.out.println();
+        System.out.printf("вредность: %.2f",this.harmfulness);
+        System.out.println();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name!= this.name)
+           this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age!=this.age && age >= 18)
+            this.age = age;
+    }
+
+    public float getBeauty() {
+        return beauty;
+    }
+
+    public void setBeauty(float beauty) {
+        if (beauty!= this.beauty && beauty>=0)
+            this.beauty = beauty;
+    }
+
+    public float getHarmfulness() {
+        return harmfulness;
+    }
+
+    public void setHarmfulness(float harmfulness) {
+        if (harmfulness!=this.harmfulness && harmfulness>=0)
+          this.harmfulness = harmfulness;
     }
 }
