@@ -7,13 +7,13 @@ public class Appartment {
     ArrayList<Room> Rooms;
 
     Appartment(){
-        AppartmentNumber = new Random().nextInt();
-        Citizens = new ArrayList<Citizen>(new Random().nextInt(10) + 1);
-        for (int i = 0; i < Citizens.size(); i++) {
+        AppartmentNumber = new Random().nextInt(300);
+        Citizens = new ArrayList<Citizen>();
+        for (int i = 0; i < new Random().nextInt(10) + 1; i++) {
             Citizens.add(new Citizen());
         }
-        Rooms = new ArrayList<>(new Random().nextInt(6) + 1);
-        for (int i = 0; i < Rooms.size(); i++) {
+        Rooms = new ArrayList<>();
+        for (int i = 0; i < new Random().nextInt(6) + 1; i++) {
             Rooms.add(new Room());
         }
     }

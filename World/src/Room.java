@@ -27,6 +27,7 @@ public class Room {
         System.out.println();
         System.out.println();
         System.out.println("Tipe of this room: " + this.roomTipe);
-        System.out.println("Room area: " + this.area);
+        System.out.printf("Room area: %.2f m2",this.area);
+        System.out.println();
     }
 }

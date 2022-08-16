@@ -7,8 +7,8 @@ public class Floor {
 
     Floor(){
         number = (byte) ((byte) new Random().nextInt(14)+(byte) 1);
-        Appartments = new ArrayList<Appartment>(new Random().nextInt(7));
-        for (int i = 0; i < Appartments.size(); i++) {
+        Appartments = new ArrayList<Appartment>();
+        for (int i = 0; i < new Random().nextInt(7); i++) {
             Appartments.add(new Appartment());
         }
     }

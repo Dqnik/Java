@@ -19,8 +19,8 @@ public class House {
                 "5/2"
         };
         number = numbers[new Random().nextInt(numbers.length)];
-        Floors = new ArrayList<Floor>(new Random().nextInt(15));
-        for (int i = 0; i < Floors.size(); i++) {
+        Floors = new ArrayList<Floor>();
+        for (int i = 0; i < new Random().nextInt(15); i++) {
             Floors.add(new Floor());
         }
     }

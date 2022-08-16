@@ -13,8 +13,8 @@ public class Street {
                 "Hollywood Boulevard"
         };
         nameStreet = name[new Random().nextInt(name.length)];
-        Houses = new ArrayList<House>(new Random().nextInt(3));
-        for (int i = 0; i < Houses.size(); i++) {
+        Houses = new ArrayList<>();
+        for (int i = 0; i < new Random().nextInt(3)+1; i++) {
             Houses.add(new House());
         }
     }
