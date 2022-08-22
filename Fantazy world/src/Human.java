@@ -2,13 +2,7 @@ public class Human extends Character{
     boolean DTDM; //Disposition to dark magic
 
     Human(String name, int hp, int stamina, boolean sex, int xp, String weapon, int age, boolean DTDM){
-        this.name = name;
-        this.hp = hp;
-        this.stamina = stamina;
-        this.sex = sex;
-        this.xp = xp;
-        this.weapon = weapon;
-        this.age = age;
+        super(name, hp, stamina, sex, xp, age, weapon);
         this.DTDM = DTDM;
     }
 

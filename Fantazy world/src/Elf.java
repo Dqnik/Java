@@ -2,13 +2,7 @@ public class Elf extends Character{
     int mana;
 
     Elf(String name, int hp, int stamina, boolean sex, int xp, String weapon, int age,int mana){
-        this.name = name;
-        this.hp = hp;
-        this.stamina = stamina;
-        this.sex = sex;
-        this.xp = xp;
-        this.weapon = weapon;
-        this.age = age;
+        super(name, hp, stamina, sex, xp, age, weapon);
         this.mana = mana;
     }
 
