@@ -24,4 +24,8 @@ public class Orc extends Character {
             System.out.println("I have been in battle many times and killed many enemies.");
         }
     }
+
+    void rage(){
+        System.out.println("You have entered rage mode! All your attacks are enhanced.");
+    }
 }

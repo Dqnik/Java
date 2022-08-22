@@ -1,7 +1,7 @@
 public class Human extends Character{
-    boolean DTM; //Disposition to magic
+    boolean DTDM; //Disposition to dark magic
 
-    Human(String name, int hp, int stamina, boolean sex, int xp, String weapon, int age, boolean DTM){
+    Human(String name, int hp, int stamina, boolean sex, int xp, String weapon, int age, boolean DTDM){
         this.name = name;
         this.hp = hp;
         this.stamina = stamina;
@@ -9,21 +9,21 @@ public class Human extends Character{
         this.xp = xp;
         this.weapon = weapon;
         this.age = age;
-        this.DTM = DTM;
+        this.DTDM = DTDM;
     }
 
     @Override
      public void print(){
         super.print();
-        if (!DTM){
+        if (!DTDM){
             System.out.println("Unfortunately, I don't have a magical talent.");
         }
-        else if (DTM){
-            System.out.println("I also have a penchant for magic.");
+        else if (DTDM){
+            System.out.println("I also have a penchant for dark magic.");
         }
     }
 
-    public void distraction(){
+    void distraction(){
         System.out.println("You have distracted the enemy's attention!");
     }
 }
