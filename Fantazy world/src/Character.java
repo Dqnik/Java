@@ -1,4 +1,4 @@
-public class Character {
+public abstract class Character {
     String name;
     int hp;
     int stamina;
@@ -20,4 +20,8 @@ public class Character {
     public void print(){
         System.out.println("Hello, my name is " + this.name + ". I am " + this.age  + " years old.I am good with such weapons as " + this.weapon + ".");
     }
+
+    abstract void heal();
+
+    abstract void learn();
 }

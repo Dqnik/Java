@@ -17,6 +17,16 @@ public class Human extends Character{
         }
     }
 
+    @Override
+    void heal() {
+
+    }
+
+    @Override
+    void learn() {
+
+    }
+
     void distraction(){
         System.out.println("You have distracted the enemy's attention!");
     }

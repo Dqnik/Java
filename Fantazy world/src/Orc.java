@@ -19,6 +19,16 @@ public class Orc extends Character {
         }
     }
 
+    @Override
+    void heal() {
+
+    }
+
+    @Override
+    void learn() {
+
+    }
+
     void rage(){
         System.out.println("You have entered rage mode! All your attacks are enhanced.");
     }

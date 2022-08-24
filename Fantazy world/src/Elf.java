@@ -12,6 +12,16 @@ public class Elf extends Character{
         System.out.println("I am very fast and can move through trees.");
     }
 
+    @Override
+    void heal() {
+
+    }
+
+    @Override
+    void learn() {
+
+    }
+
     void ElfWisdom(){
         System.out.println("Your mana regeneration is doubled for the next minute!");
     }
