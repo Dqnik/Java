@@ -21,4 +21,15 @@ public class Woman extends Person{
     void  MakeUp(){
         beauty *= 2;
     }
+
+    void SayHi(){
+        System.out.println("Hi");
+    }
+
+    @Override
+    public void birthday(){
+        super.birthday();
+        beauty -= 30;
+        bitchness = (byte)127;
+    }
 }

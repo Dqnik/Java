@@ -1,4 +1,4 @@
-public class Person {
+public abstract class Person implements Holiday{
     int age;
     String name;
     Person(){
@@ -12,5 +12,11 @@ public class Person {
     }
     void print(){
         System.out.println(age + name);
+    }
+
+    abstract void SayHi();
+
+    public void birthday(){
+        age++;
     }
 }

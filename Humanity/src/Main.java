@@ -8,5 +8,9 @@ public class Main {
         for (Person p : party) {
             p.print();
         }
+
+        for (Person p: party) {
+            p.SayHi();
+        }
     }
 }
